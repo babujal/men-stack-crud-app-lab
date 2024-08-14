@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/sptrailers" method="POST">
+        <fieldset>
+            <legend> Create a new todo</legend>
+
+            <label>
+                Unit Number: <input type="text" name="trNumber" placeholder="Enter unit No" />
+                
+            </label>
+            <br>
+            <label>
+                Isue descriptioon: <input type="text" name="issues" placeholder="Describe the issues"/>
+                
+            </label>
+            <br>
+            <label>
+                Comments: <input type="text" name="comments" />
+                
+            </label>
+            <br>
+            <label>
+                Is Complete: <input type="checkbox" name="isComplete"   />
+                
+            </label>
+        </fieldset>
+        <input type="submit" value="create new todo"/>
+    </form>
+</body>
+</html>

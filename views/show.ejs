@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  action="/sptrailers/<%=selectedTrailer._id%>?_method=PUT" method="POST">
+        <fieldset>
+            <legend>Edit Trailer</legend>
+
+            <label>
+                Unit Number: <input value='<%=selectedTrailer.trNumber%>' type="text" name="trNumber"/>
+                
+            </label>
+            <br>
+            <label>
+                Isue description: <input  value= '<%=selectedTrailer.issues%>' type="text" name="issues" />
+                
+            </label>
+            <br>
+            <label>
+                Comments: <input  value= '<%=selectedTrailer.comments%>' type="text" name="comments" />
+                
+            </label>
+            <br>
+            <label>
+                Is Complete:
+                <input
+                type="checkbox"
+                <%=selectedTrailer.isComplete ? "checked": "" %>
+                name="isComplete"   />
+                
+            </label>
+            <input type="submit" value="edit trailer" />
+        </fieldset>
+       
+    </form>
+    <a href="/sptrailers"><button>Back</button></a>
+    <form action="/sptrailers/<%=selectedTrailer._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="delete"/>
+    </form>
+</body>
+</html>
